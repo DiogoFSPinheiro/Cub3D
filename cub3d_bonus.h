@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3d.h                                            :+:      :+:    :+:   */
+/*   cub3d_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diogosan <diogosan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 17:56:41 by diogosan          #+#    #+#             */
-/*   Updated: 2024/12/03 09:22:56 by diogosan         ###   ########.fr       */
+/*   Updated: 2024/12/03 16:26:46 by diogosan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUB3D_H
-# define CUB3D_H
+#ifndef CUB3D_BONUS_H
+# define CUB3D_BONUS_H
 
 # include "libraries/libft/libft.h"
 # include "libraries/printf/ft_printf.h"
@@ -34,7 +34,9 @@
 # define HEIGHT 1080
 
 # define SQUARE 64
+# define SQUARE_MINI 16
 # define PLAYER_SIZE 20
+# define PLAYER_SIZE_MINI 10
 # define OBSTACLE_COLOR 0x000000
 
 # define DR 0.000545415 //(FOV / WIDTH)
@@ -170,9 +172,10 @@ int		arrow_keys(int Key, t_mlx *mlx);
 
 // --------------- draw_shapes.c ---------------- //
 
-void	ft_update_player(int px, int py, t_img *img, t_mlx *win);
+void	ft_update_player(float px, float py, t_img *img, t_mlx *win);
 void	ft_draw_map(t_map *map, t_img *img, t_mlx *win);
 void	draw_square(t_img *img, int x, int y, int color);
+void	ft_draw_mini_map(t_map *map, t_img *img, int x, int y);
 
 // --------------- utils.c --------------------- //
 
@@ -196,7 +199,7 @@ void	draw_3d_walls(t_mlx *win, float distance, int column, float hx);
 // --------------- line_algo.c  --------------------- //
 
 void	ft_bresenhams_alg(t_mlx *win, float end_x, float end_y, int color);
-void	ft_vision_angle(t_mlx *win, float px, float py);
+void	ft_vision_angle_mini(t_mlx *win, float px, float py);
 
 // --------------- clean_rotine.c --------------------- //
 
@@ -209,5 +212,6 @@ int		ft_event_checker(int Key, t_mlx *mlx);
 void	ft_rotate_right(t_mlx *mlx);
 void	ft_rotate_left(t_mlx *mlx);
 void	ft_init_vars(t_ray_vars	*vars, t_mlx *win);
+char	ft_is_wall(float next_x, float next_y, char **map);
 
 #endif
