@@ -6,11 +6,11 @@
 /*   By: diogosan <diogosan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 11:20:34 by diogosan          #+#    #+#             */
-/*   Updated: 2024/12/02 12:21:49 by diogosan         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:37:42 by diogosan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 void	ft_vision_angle(t_mlx *win, float px, float py)
 {

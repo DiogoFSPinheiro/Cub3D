@@ -6,11 +6,11 @@
 /*   By: diogosan <diogosan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 19:51:00 by diogosan          #+#    #+#             */
-/*   Updated: 2024/12/02 13:16:52 by diogosan         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:37:46 by diogosan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 /**
  * raycaster - Casts rays to determine intersections with the map.
  *

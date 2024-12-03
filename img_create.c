@@ -6,11 +6,11 @@
 /*   By: diogosan <diogosan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 11:28:06 by diogosan          #+#    #+#             */
-/*   Updated: 2024/12/02 12:00:16 by diogosan         ###   ########.fr       */
+/*   Updated: 2024/12/03 09:24:05 by diogosan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 void	my_pixel_put(t_img *img, int x, int y, int color)
 {
@@ -40,7 +40,7 @@ void	render_background(t_img *img, int color)
 	}
 }
 
-void	render_background_top_bot(t_img *img)
+void	render_background_top_bot(t_mlx *win, t_img *img)
 {
 	int	y;
 	int	x;
@@ -50,14 +50,14 @@ void	render_background_top_bot(t_img *img)
 	{
 		x = 0;
 		while (x < WIDTH)
-			my_pixel_put(img, x++, y, 0xffffff);
+			my_pixel_put(img, x++, y, win->color_top);
 		++y;
 	}
 	while (y < HEIGHT)
 	{
 		x = 0;
 		while (x < WIDTH)
-			my_pixel_put(img, x++, y, 0xff00ff);
+			my_pixel_put(img, x++, y, win->color_bot);
 		++y;
 	}
 }

@@ -6,11 +6,11 @@
 /*   By: diogosan <diogosan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:32:11 by diogosan          #+#    #+#             */
-/*   Updated: 2024/12/02 12:19:02 by diogosan         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:37:38 by diogosan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 static void	ft_go_up(t_mlx *mlx);
 static void	ft_go_down(t_mlx *mlx);

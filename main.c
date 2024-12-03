@@ -6,11 +6,11 @@
 /*   By: diogosan <diogosan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:56:01 by diogosan          #+#    #+#             */
-/*   Updated: 2024/12/02 12:19:34 by diogosan         ###   ########.fr       */
+/*   Updated: 2024/12/03 09:20:31 by diogosan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 int	draw(t_mlx *win)
 {
@@ -19,7 +19,7 @@ int	draw(t_mlx *win)
 	ft_update_player(win->player->x, win->player->y,
 		&win->img, win);
 	ft_vision_angle(win, win->player->x, win->player->y);
-	render_background_top_bot(&win->img);
+	render_background_top_bot(win, &win->img);
 	raycaster(win);
 	mlx_put_image_to_window(win->mlx_connect, win->mlx_win,
 		win->img.mlx_img, 0, 0);

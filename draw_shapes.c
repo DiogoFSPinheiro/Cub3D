@@ -6,11 +6,11 @@
 /*   By: diogosan <diogosan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 14:45:28 by diogosan          #+#    #+#             */
-/*   Updated: 2024/12/02 13:16:23 by diogosan         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:37:36 by diogosan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 void	draw_square(t_img *img, int x, int y, int color)
 {

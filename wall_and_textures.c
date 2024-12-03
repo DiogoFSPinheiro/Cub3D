@@ -6,11 +6,11 @@
 /*   By: diogosan <diogosan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 10:55:55 by diogosan          #+#    #+#             */
-/*   Updated: 2024/12/02 12:13:28 by diogosan         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:37:53 by diogosan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 void	ft_texture_picker(t_mlx *win, float ray_point, char c)
 {
