@@ -6,7 +6,7 @@
 /*   By: diogosan <diogosan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 14:47:44 by diogosan          #+#    #+#             */
-/*   Updated: 2024/12/14 16:38:32 by paulo-do         ###   ########.fr       */
+/*   Updated: 2024/12/17 13:56:06 by diogosan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -173,7 +173,7 @@ float	ft_set_player(t_mlx *win, char **map)
 		return (4.712389);
 	if (map[i][j] == 'N')
 		return (1.570796);
-	if (map[i][j] == 'E')
+	if (map[i][j] == 'W')
 		return (3.141593);
 	return (0);
 }
