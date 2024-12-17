@@ -6,7 +6,7 @@
 /*   By: diogosan <diogosan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 17:56:41 by diogosan          #+#    #+#             */
-/*   Updated: 2024/12/03 16:26:46 by diogosan         ###   ########.fr       */
+/*   Updated: 2024/12/17 14:38:02 by diogosan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,14 @@
 # define OBSTACLE_COLOR 0x000000
 
 # define DR 0.000545415 //(FOV / WIDTH)
+
+typedef struct s_coords
+{
+	int	top_left_x;
+	int	top_left_y;
+	int	bottom_right_x;
+	int	bottom_right_y;
+}	t_coords;
 
 typedef struct s_valid_map
 {
@@ -248,7 +256,7 @@ int		ft_event_checker(int Key, t_mlx *mlx);
 void	ft_rotate_right(t_mlx *mlx);
 void	ft_rotate_left(t_mlx *mlx);
 void	ft_init_vars(t_ray_vars	*vars, t_mlx *win);
-char	ft_is_wall(float next_x, float next_y, char **map);
+char	ft_is_wall(float next_x, float next_y, float player_size, t_mlx *mlx);
 
 //ft_getters
 int		ft_get_file_size(char *file);

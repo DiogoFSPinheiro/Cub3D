@@ -6,7 +6,7 @@
 /*   By: diogosan <diogosan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 11:31:01 by diogosan          #+#    #+#             */
-/*   Updated: 2024/12/03 11:46:17 by diogosan         ###   ########.fr       */
+/*   Updated: 2024/12/17 14:38:11 by diogosan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,29 @@ void	ft_init_vars(t_ray_vars	*vars, t_mlx *win)
 	vars->ra = win->player->player_angle - (FOV / 2);
 }
 
-char	ft_is_wall(float next_x, float next_y, char **map)
+char	ft_is_wall(float next_x, float next_y, float player_size, t_mlx *mlx)
 {
-	int	grid_x;
-	int	grid_y;
+	t_coords	coords;
+	int			y;
+	int			x;
 
-	grid_x = next_x / 64;
-	grid_y = next_y / 64;
-	if (grid_y < 0 || grid_y >= HEIGHT || grid_x < 0 || grid_x >= WIDTH)
-		return ('1');
-	return (map[(int)grid_y][(int)grid_x]);
+	coords.top_left_x = (next_x - player_size) / 64;
+	coords.top_left_y = (next_y - player_size) / 64;
+	coords.bottom_right_x = (next_x + player_size) / 64;
+	coords.bottom_right_y = (next_y + player_size) / 64;
+	y = coords.top_left_y;
+	while (y <= coords.bottom_right_y)
+	{
+		x = coords.top_left_x;
+		while (x <= coords.bottom_right_x)
+		{
+			if (y < 0 || y >= mlx->map->height || x < 0 || x >= mlx->map->width)
+				return ('1');
+			if (mlx->map->coord[y][x] == '1')
+				return ('1');
+			x++;
+		}
+		y++;
+	}
+	return ('0');
 }
