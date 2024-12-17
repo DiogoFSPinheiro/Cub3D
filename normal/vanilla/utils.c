@@ -6,11 +6,11 @@
 /*   By: diogosan <diogosan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 14:47:44 by diogosan          #+#    #+#             */
-/*   Updated: 2024/12/03 09:26:13 by diogosan         ###   ########.fr       */
+/*   Updated: 2024/12/14 16:38:32 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/cub3d_bonus.h"
+#include "../../headers/cub3d.h"
 
 int	ft_mod(int n)
 {
@@ -24,6 +24,12 @@ float	line_length(float x1, float y1, float x2, float y2)
 	return (sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2)));
 }
 
+/*
+	this places the angle on the right position (value) 
+	of ra on the trignometric circle
+	if ra = -180{ (-180) + 2PI } ra = 180
+	if ra = 390{ 390 - 2PI } ra = 30
+*/
 int	ft_circle_normalizer(float *ra)
 {
 	if (*ra < 0)
@@ -43,8 +49,8 @@ char	**get_final_map(t_temp_map *map)
 	j = 0;
 	new_map = NULL;
 	first_check(map, 0, 0);
-	while (map->lines && map->lines[i][j] != '0' && map->lines[i][j] != '1'
-		&& map->lines[i][j] != ' ')
+	while (map->lines && map->lines[i][j] != '0'
+		&& map->lines[i][j] != '1' && map->lines[i][j] != ' ')
 		i++;
 	new_map = ft_calloc(sizeof(char *), (map->size - i) + 1);
 	while (map->lines[i] != NULL)
@@ -126,8 +132,8 @@ int	ft_get_colors(t_temp_map *map, int c)
 	char	**temp;
 	char	*color;
 
-	hex_color = 0;
 	i = 0;
+	hex_color = 0;
 	temp = NULL;
 	while (map->lines[i] && map->lines[i][0] != c)
 		i++;
@@ -155,7 +161,7 @@ float	ft_set_player(t_mlx *win, char **map)
 	while (map[++i] != NULL)
 	{
 		while (map[i][j] != '\0' && map[i][j] != 'S'
-			&& map[i][j] != 'N' && map[i][j] != 'W' && map[i][j] != 'E')
+		&& map[i][j] != 'N' && map[i][j] != 'W' && map[i][j] != 'E')
 			j++;
 		if (map[i][j] != '\0')
 			break ;

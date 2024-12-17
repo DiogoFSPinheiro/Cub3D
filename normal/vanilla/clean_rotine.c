@@ -6,11 +6,11 @@
 /*   By: diogosan <diogosan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 11:23:18 by diogosan          #+#    #+#             */
-/*   Updated: 2024/12/02 15:52:54 by diogosan         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:37:28 by diogosan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/cub3d_bonus.h"
+#include "../../headers/cub3d.h"
 
 void	free_textures_map(t_mlx *mlx)
 {
