@@ -39,11 +39,49 @@ int	ft_circle_normalizer(float *ra)
 	return (SUCCESS);
 }
 
+int		ft_get_max_line(int i, t_temp_map *map)
+{
+	int	max_len;
+
+	max_len = -1;
+	while (map->lines[i] != NULL)
+	{
+		if ((int)ft_strlen(map->lines[i]) > max_len)
+			max_len = (int)ft_strlen(map->lines[i]);
+		i++;
+	}
+	return (max_len + 1);
+}
+
+char *ft_copy_line(char *map, int max_line)
+{
+	int		i;
+	char	*line;
+
+	i = 0;
+	line = NULL;
+	line = ft_calloc(sizeof(char), max_line + 1);
+	while(map[i] != '\0' && map[i] != '\n')
+	{
+		line[i] = map[i];
+		if (map[i] == ' ')
+			line[i] = '0';
+		i++;
+	}
+	while(i < max_line)
+	{
+			line[i] = '0';
+			i++;
+	}
+	line[i] = '\0';
+	return (line);
+}
 char	**get_final_map(t_temp_map *map)
 {
 	int		i;
 	int		j;
 	char	**new_map;
+	int		max_line;
 
 	i = 0;
 	j = 0;
@@ -53,9 +91,10 @@ char	**get_final_map(t_temp_map *map)
 		&& map->lines[i][j] != '1' && map->lines[i][j] != ' ')
 		i++;
 	new_map = ft_calloc(sizeof(char *), (map->size - i) + 1);
+	max_line = ft_get_max_line(i, map);
 	while (map->lines[i] != NULL)
 	{
-		new_map[j] = ft_strdup(map->lines[i]);
+		new_map[j] = ft_copy_line(map->lines[i], max_line);
 		i++;
 		j++;
 	}
@@ -92,21 +131,21 @@ char	*get_texture_path(t_temp_map *map, int c)
 	return (path);
 }
 
-int	get_max_len(char **map)
-{
-	int	i;
-	int	max_len;
-
-	i = 0;
-	max_len = -1;
-	while (map[i] != NULL)
-	{
-		if ((int)ft_strlen(map[i]) > max_len)
-			max_len = (int)ft_strlen(map[i]);
-		i++;
-	}
-	return (max_len + 1);
-}
+//int	get_max_len(char **map)
+//{
+//	int	i;
+//	int	max_len;
+//
+//	i = 0;
+//	max_len = -1;
+//	while (map[i] != NULL)
+//	{
+//		if ((int)ft_strlen(map[i]) > max_len)
+//			max_len = (int)ft_strlen(map[i]);
+//		i++;
+//	}
+//	return (max_len + 1);
+//}
 
 int	rgb_to_int(int red, int green, int blue)
 {
@@ -194,7 +233,7 @@ void	set_up_win(t_mlx *win, t_temp_map *map)
 	win->west_texture.path = get_texture_path(map, 'W');
 	win->east_texture.path = get_texture_path(map, 'E');
 	win->map->height = get_map_size(win->map->coord) - 1;
-	win->map->width = get_max_len(win->map->coord);
+	win->map->width = ft_strlen(win->map->coord[0]);
 	win->player->player_angle = ft_set_player(win, win->map->coord);
 	win->player->player_delta_x = cos(win->player->player_angle) * 7;
 	win->player->player_delta_y = sin(win->player->player_angle) * 7;
