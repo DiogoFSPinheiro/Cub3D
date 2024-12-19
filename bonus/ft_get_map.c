@@ -107,7 +107,6 @@ char	*get_texture_path(t_temp_map *map, int c)
 		map->lines[i] = line;
 		temp = ft_split(map->lines[i], ' ');
 		path = ft_strdup(temp[1]);
-		printf("%s\n", path);
 		free_split(temp);
 	}
 	return (path);
