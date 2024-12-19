@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_setters.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulo-do <paulo-do@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: diogosan <diogosan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 07:36:24 by paulo-do          #+#    #+#             */
-/*   Updated: 2024/12/19 07:36:24 by paulo-do         ###   ########.fr       */
+/*   Updated: 2024/12/19 09:03:43 by diogosan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ float	ft_set_player(t_mlx *win, char **map)
 	win->player->x = (float) i;
 	win->player->y = (float) j;
 	if (map[i][j] == 'S')
-		return (4.712389);
-	if (map[i][j] == 'N')
 		return (1.570796);
+	if (map[i][j] == 'N')
+		return (4.712389);
 	if (map[i][j] == 'W')
 		return (3.141593);
 	return (0);
@@ -54,8 +54,8 @@ void	set_up_win(t_mlx *win, t_temp_map *map)
 	win->south_texture.path = get_texture_path(map, 'S');
 	win->west_texture.path = get_texture_path(map, 'W');
 	win->east_texture.path = get_texture_path(map, 'E');
-	win->map->height = get_map_size(win->map->coord) - 1;
-	win->map->width = ft_strlen(win->map->coord[0]);
+	win->map->height = get_map_size(win->map->coord);
+	win->map->width = ft_strlen(win->map->coord[0]) - 1;
 	win->player->player_angle = ft_set_player(win, win->map->coord);
 	win->player->player_delta_x = cos(win->player->player_angle) * 7;
 	win->player->player_delta_y = sin(win->player->player_angle) * 7;

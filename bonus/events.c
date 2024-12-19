@@ -6,7 +6,7 @@
 /*   By: diogosan <diogosan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:32:11 by diogosan          #+#    #+#             */
-/*   Updated: 2024/12/17 14:29:56 by diogosan         ###   ########.fr       */
+/*   Updated: 2024/12/19 09:00:33 by diogosan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void	ft_go_up(t_mlx *mlx)
 
 	next_x = mlx->player->x + mlx->player->player_delta_x;
 	next_y = mlx->player->y + mlx->player->player_delta_y;
-	if (ft_is_wall(next_x, next_y, PLAYER_SIZE, mlx) != '1')
+	if (ft_is_wall(next_x, next_y, (int)PLAYER_SIZE / 2, mlx) != '1')
 	{
 		mlx->player->x = next_x;
 		mlx->player->y = next_y;
@@ -56,7 +56,7 @@ static void	ft_go_down(t_mlx *mlx)
 
 	next_x = mlx->player->x - mlx->player->player_delta_x;
 	next_y = mlx->player->y - mlx->player->player_delta_y;
-	if (ft_is_wall(next_x, next_y, PLAYER_SIZE, mlx) != '1')
+	if (ft_is_wall(next_x, next_y, (int)PLAYER_SIZE / 2, mlx) != '1')
 	{
 		mlx->player->x = next_x;
 		mlx->player->y = next_y;
@@ -70,7 +70,7 @@ static void	ft_go_left(t_mlx *mlx)
 
 	next_x = mlx->player->x + mlx->player->player_delta_y * 0.63;
 	next_y = mlx->player->y - mlx->player->player_delta_x * 0.63;
-	if (ft_is_wall(next_x, next_y, PLAYER_SIZE, mlx) != '1')
+	if (ft_is_wall(next_x, next_y, (int)PLAYER_SIZE / 2, mlx) != '1')
 	{
 		mlx->player->x = next_x;
 		mlx->player->y = next_y;
@@ -84,7 +84,7 @@ static void	ft_go_right(t_mlx *mlx)
 
 	next_x = mlx->player->x - mlx->player->player_delta_y * 0.63;
 	next_y = mlx->player->y + mlx->player->player_delta_x * 0.63;
-	if (ft_is_wall(next_x, next_y, PLAYER_SIZE, mlx) != '1')
+	if (ft_is_wall(next_x, next_y, (int)PLAYER_SIZE / 2, mlx) != '1')
 	{
 		mlx->player->x = next_x;
 		mlx->player->y = next_y;
