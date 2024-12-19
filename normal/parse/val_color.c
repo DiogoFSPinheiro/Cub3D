@@ -38,28 +38,31 @@ int	check_colors(char *line, t_temp_map *map)
 {
 	int	comma;
 	int	i;
+	char *temp;
 
 	i = 0;
 	comma = 0;
-	while (line[i] != '\0' && line[i] != ' ')
+	temp = ft_remove_extra_spaces(line, map);
+	while (temp[i] != '\0' && !is_whitespace(temp[i]))
 		i++;
-	if (line[i] == ' ')
+	if (is_whitespace(line[i]))
 		i++;
-	while (line[i] != '\0' && line[i] != '\n')
+	while (temp[i] != '\0' && temp[i] != '\n')
 	{
-		if (line[i] == ',' && i++ > 0)
+		if (temp[i] == ',' && i++ > 0)
 			comma++;
-		if (line[i] != ',' && ft_isdigit(line[i]) == 0)
+		if (temp[i] != ',' && ft_isdigit(temp[i]) == 0)
 			return (-1);
-		if (line[i] != '\n' && ft_isdigit(line[i]) == 0
-			&& line[i] != ',' && line[i] != ' ')
+		if (temp[i] != '\n' && ft_isdigit(temp[i]) == 0
+			&& temp[i] != ',' && !is_whitespace(temp[i]))
 			return (-1);
-		if (line[i] != '\0' && line[i] != '\n')
+		if (temp[i] != '\0' && temp[i] != '\n')
 			i++;
 	}
-	if ((line[i] != '\0' && line[i] != '\n') || comma != 2)
+	if ((temp[i] != '\0' && temp[i] != '\n') || comma != 2)
 		return (error_central(-4, map));
-	check_colors_limits(line, map);
+	check_colors_limits(temp, map);
+	free(temp);
 	return (1);
 }
 
