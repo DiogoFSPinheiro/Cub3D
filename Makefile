@@ -24,9 +24,9 @@ SRCS_P_bonus = bonus/parse/flood_map.c bonus/parse/ft_freedoom.c bonus/parse/val
 				bonus/parse/ft_error.c bonus/parse/val_map.c bonus/parse/main.c
 
 SRCS_P = normal/parse/flood_map.c normal/parse/ft_freedoom.c normal/parse/val_colo_utils.c \
-	normal/parse/ft_assets.c normal/parse/ft_getters.c normal/parse/val_extensions.c \
-	normal/parse/ft_checkers.c normal/parse/main.c normal/parse/val_map.c \
-	normal/parse/ft_error.c normal/parse/val_color.c normal/parse/ft_validations.c
+			normal/parse/ft_assets.c normal/parse/ft_getters.c normal/parse/val_extensions.c \
+			normal/parse/ft_checkers.c normal/parse/main.c normal/parse/val_map.c \
+			normal/parse/ft_error.c normal/parse/val_color.c normal/parse/ft_validations.c
 
 
 SRCS = $(SRCS_D) $(SRCS_P)

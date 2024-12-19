@@ -21,19 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5a503b18-b43e-4391-951d-960a73990013" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a.cub" beforeDir="false" afterPath="$PROJECT_DIR$/a.cub" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bonus/ft_get_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/bonus/ft_get_map.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bonus/parse/ft_assets.c" beforeDir="false" afterPath="$PROJECT_DIR$/bonus/parse/ft_assets.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bonus/parse/ft_freedoom.c" beforeDir="false" afterPath="$PROJECT_DIR$/bonus/parse/ft_freedoom.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bonus/parse/val_colo_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/bonus/parse/val_colo_utils.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bonus/parse/val_color.c" beforeDir="false" afterPath="$PROJECT_DIR$/bonus/parse/val_color.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/cub3d.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/cub3d.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/cub3d_bonus.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/cub3d_bonus.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minilibx-linux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/normal/parse/ft_assets.c" beforeDir="false" afterPath="$PROJECT_DIR$/normal/parse/ft_assets.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/normal/parse/ft_freedoom.c" beforeDir="false" afterPath="$PROJECT_DIR$/normal/parse/ft_freedoom.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/normal/parse/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/normal/parse/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/normal/parse/val_color.c" beforeDir="false" afterPath="$PROJECT_DIR$/normal/parse/val_color.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +178,7 @@
       <workItem from="1734601045346" duration="4450000" />
       <workItem from="1734616733387" duration="309000" />
       <workItem from="1734624235732" duration="6085000" />
-      <workItem from="1734631681632" duration="5681000" />
+      <workItem from="1734631681632" duration="7255000" />
     </task>
     <servers />
   </component>
