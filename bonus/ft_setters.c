@@ -28,8 +28,8 @@ float	ft_set_player(t_mlx *win, char **map)
 			break ;
 		j = 0;
 	}
-	win->player->x = (float) i;
-	win->player->y = (float) j;
+	win->player->x = (float) j * SQUARE + PLAYER_SIZE;
+	win->player->y = (float) i * SQUARE + PLAYER_SIZE;
 	if (map[i][j] == 'S')
 		return (1.570796);
 	if (map[i][j] == 'N')

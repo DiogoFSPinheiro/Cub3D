@@ -201,7 +201,6 @@ int		arrow_keys(int Key, t_mlx *mlx);
 // --------------- draw_shapes.c ---------------- //
 
 void	ft_update_player(int px, int py, t_img *img, t_mlx *win);
-void	ft_draw_map(t_map *map, t_img *img, t_mlx *win);
 void	draw_square(t_img *img, int x, int y, int color);
 
 // --------------- utils.c --------------------- //
@@ -273,6 +272,7 @@ int		check_extension(char *file_name, char *ext, int len);
 
 //val_colo_utils
 void	check_next_char(t_temp_map *map, int c, int i);
+char	*ft_color_special(char *line, int j, int i, t_temp_map *map);
 
 //ft_assets
 void	check_textures(t_temp_map *map, int i, int j, char **temp);

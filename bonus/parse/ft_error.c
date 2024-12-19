@@ -28,6 +28,8 @@ void	error_central_extra(int error_code)
 		ft_printf_err("Error with the map\n");
 	if (error_code == -14)
 		ft_printf_err("Open map\n");
+	if (error_code == -15)
+		ft_printf_err("Ft_calloc Error\n");
 }
 
 int	error_central(int error_code, t_temp_map *map)
@@ -35,7 +37,7 @@ int	error_central(int error_code, t_temp_map *map)
 	if (map)
 		free_map_parse(&map);
 	if (error_code == -1)
-		ft_printf_err("invalid file\n");
+		ft_printf_err("Invalid file\n");
 	if (error_code == -2)
 		ft_printf_err("Cant open this file\n");
 	if (error_code == -3)
@@ -45,12 +47,11 @@ int	error_central(int error_code, t_temp_map *map)
 	if (error_code == -5)
 		ft_printf_err("Missing colors\n");
 	if (error_code == -6)
-		ft_printf_err("colors must be from 0 to 255\n");
+		ft_printf_err("Colors must be from 0 to 255\n");
 	if (error_code == -7)
-		ft_printf_err("invalid characters\n");
+		ft_printf_err("Invalid characters\n");
 	if (error_code < -7)
 		error_central_extra(error_code);
-	ft_printf("Thank you for using our print a square services\n");
 	exit(EXIT_FAILURE);
 }
 

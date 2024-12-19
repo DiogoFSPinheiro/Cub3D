@@ -15,7 +15,6 @@
 int	draw(t_mlx *win)
 {
 	render_background(&win->img, 0xD3D3D3);
-	ft_draw_map(win->map, &win->img, win);
 	ft_update_player(win->player->x, win->player->y,
 		&win->img, win);
 	ft_vision_angle(win, win->player->x, win->player->y);
@@ -58,34 +57,7 @@ void	render(t_mlx *win)
 	mlx_loop(win->mlx_connect);
 }
 
-char *ft_color_special(char *line, int j, int i, t_temp_map *map)
-{
-	char	*new_line;
 
-	new_line = ft_calloc(sizeof(char), ft_strlen(line) + 2);
-	if(!new_line)
-		error_central(-15, map);
-	while (line[i]!= '\0')
-	{
-		while(line[i] != '\0' && line[i] != ',')
-		{
-			new_line[j] = line[i];
-			j++;
-			i++;
-		}
-		while (line[i] != '\0' && !is_whitespace(line[i]))
-		{
-			new_line[j] = line[i];
-			j++;
-			i++;
-		}
-		while (is_whitespace(line[i]))
-			i++;
-	}
-	new_line[j] = '\0';
-	free(line);
-	return (new_line);
-}
 
 char	*ft_remove_extra_spaces(char *str, t_temp_map *map)
 {
@@ -137,6 +109,5 @@ int	main(int argc, char *argv[])
 		ft_printf_err("Only one input is accepted");
 	else
 		ft_printf_err("Please use:\n./cub3d pwd/to/the/map\n");
-	ft_printf("Thank you for using our print a square services\n");
 	return (0);
 }
