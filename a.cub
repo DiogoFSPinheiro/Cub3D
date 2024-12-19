@@ -1,4 +1,4 @@
-      F 205,92,92
+      F 3,92,92
  	    			C			 223,                  			  255	, 	0
 
 SO ./assets/south_texture.xpm
@@ -8,6 +8,6 @@ WE ./assets/west_texture.xpm
 
 
 
-11111111111
+     11111111111
 100000000S1
 11111111111

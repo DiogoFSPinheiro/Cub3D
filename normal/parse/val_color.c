@@ -14,23 +14,21 @@
 
 int	check_colors_limits(char *line, t_temp_map *map)
 {
-	int		i;
 	int		flag;
 	char	**new;
 
-	i = -1;
 	flag = 0;
 	line[1] = ',';
 	new = ft_split(line, ',');
+	if (!new[0] || !new[1] || !new[2] || !new[3])
+		return (free_split(new), error_central(-5, map));
 	if (ft_atoi(new[1]) > 255 || ft_atoi(new[2]) > 255
 		|| ft_atoi(new[3]) > 255)
 		flag = -1;
 	if (ft_atoi(new[1]) < 0 || ft_atoi(new[2]) < 0
 		|| ft_atoi(new[3]) < 0)
 		flag = -1;
-	while (++i < 5)
-		free(new[i]);
-	free(new);
+	free_split(new);
 	if (flag == -1)
 		return (error_central(-6, map));
 	return (1);
