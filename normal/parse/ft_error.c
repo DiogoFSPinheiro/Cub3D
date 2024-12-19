@@ -28,6 +28,8 @@ void	error_central_extra(int error_code)
 		ft_printf_err("Error with the map\n");
 	if (error_code == -14)
 		ft_printf_err("Open map\n");
+	if (error_code == -15)
+		ft_printf_err("Error in ft_calloc\n");
 }
 
 int	error_central(int error_code, t_temp_map *map)

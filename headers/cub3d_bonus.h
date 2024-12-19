@@ -228,6 +228,8 @@ void	set_up_win(t_mlx *win, t_temp_map *map);
 float	line_length(float x1, float y1, float x2, float y2);
 int		ft_circle_normalizer(float *ra);
 void	ft_value_setter(float *val1, float *set1, float *val2, float *set2);
+int		rgb_to_int(int red, int green, int blue);
+char	*ft_copy_line(char *map, int max_line);
 
 // --------------- raycast.c --------------------- //
 
@@ -257,6 +259,17 @@ void	ft_rotate_right(t_mlx *mlx);
 void	ft_rotate_left(t_mlx *mlx);
 void	ft_init_vars(t_ray_vars	*vars, t_mlx *win);
 char	ft_is_wall(float next_x, float next_y, float player_size, t_mlx *mlx);
+
+//ft_get_map
+char	*get_texture_path(t_temp_map *map, int c);
+int		ft_get_max_line(int i, t_temp_map *map);
+int		ft_get_colors(t_temp_map *map, int c);
+char	**get_final_map(t_temp_map *map);
+int		get_map_size(char **map);
+
+//ft_setters
+float	ft_set_player(t_mlx *win, char **map);
+void	set_up_win(t_mlx *win, t_temp_map *map);
 
 //ft_getters
 int		ft_get_file_size(char *file);

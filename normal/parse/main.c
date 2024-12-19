@@ -58,6 +58,35 @@ void	render(t_mlx *win)
 	mlx_loop(win->mlx_connect);
 }
 
+char *ft_color_special(char *line, int j, int i, t_temp_map *map)
+{
+	char	*new_line;
+
+	new_line = ft_calloc(sizeof(char), ft_strlen(line) + 2);
+	if(!new_line)
+		error_central(-15, map);
+	while (line[i]!= '\0')
+	{
+		while(line[i] != '\0' && line[i] != ',')
+		{
+			new_line[j] = line[i];
+			j++;
+			i++;
+		}
+		while (line[i] != '\0' && !is_whitespace(line[i]))
+		{
+			new_line[j] = line[i];
+			j++;
+			i++;
+		}
+		while (is_whitespace(line[i]))
+			i++;
+	}
+	new_line[j] = '\0';
+	free(line);
+	return (new_line);
+}
+
 char	*ft_remove_extra_spaces(char *str, t_temp_map *map)
 {
 	char	*line;
@@ -68,10 +97,7 @@ char	*ft_remove_extra_spaces(char *str, t_temp_map *map)
 	j = 0;
 	line = ft_calloc(sizeof(char), ft_strlen(str) + 1);
 	if (!line)
-	{
-		ft_printf_err("Error in calloc\n");
-		error_central(0, map);
-	}
+		error_central(-15, map);
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	while (str[i])
@@ -84,6 +110,8 @@ char	*ft_remove_extra_spaces(char *str, t_temp_map *map)
 			line[j++] = ' ';
 	}
 	line[j] = '\0';
+	if (line[0] == 'C' || line[0] == 'F')
+		line = ft_color_special(line, 0, 0, map);
 	return (line);
 }
 
