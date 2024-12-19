@@ -69,10 +69,10 @@ void	flood(t_temp_map *map, int y, int x, int map_size)
 {
 	if (y > map_size || y < map->start)
 		return ;
-	if (x > (int)ft_strlen(map->lines[y]))
+	if (x < 0 || x > (int)ft_strlen(map->lines[y]))
 		return ;
 	if (map->lines[y][x] != '0' && map->lines[y][x] != ' '
-		&& map->lines[y][x] != 'N')
+		&& map->lines[y][x] != map->player->player)
 		return ;
 	if (map->lines[y][x] == '0' || map->lines[y][x] == ' ')
 		map->lines[y][x] = 'F';

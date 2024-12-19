@@ -19,13 +19,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a503b18-b43e-4391-951d-960a73990013" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a.cub" beforeDir="false" afterPath="$PROJECT_DIR$/a.cub" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bonus/parse/val_color.c" beforeDir="false" afterPath="$PROJECT_DIR$/bonus/parse/val_color.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/normal/parse/flood_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/normal/parse/flood_map.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/normal/parse/val_color.c" beforeDir="false" afterPath="$PROJECT_DIR$/normal/parse/val_color.c" afterDir="false" />
-    </list>
+    <list default="true" id="5a503b18-b43e-4391-951d-960a73990013" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +62,9 @@
         <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
       </map>
     </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -177,6 +174,7 @@
       <workItem from="1734595916127" duration="1937000" />
       <workItem from="1734601045346" duration="4450000" />
       <workItem from="1734616733387" duration="309000" />
+      <workItem from="1734624235732" duration="4140000" />
     </task>
     <servers />
   </component>
