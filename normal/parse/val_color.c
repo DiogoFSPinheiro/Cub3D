@@ -21,7 +21,7 @@ int	check_colors_limits(char *line, t_temp_map *map)
 	line[1] = ',';
 	new = ft_split(line, ',');
 	if (!new[0] || !new[1] || !new[2] || !new[3])
-		return (free_split(new), error_central(-5, map));
+		return (free(line), free_split(new), error_central(-5, map));
 	if (ft_atoi(new[1]) > 255 || ft_atoi(new[2]) > 255
 		|| ft_atoi(new[3]) > 255)
 		flag = -1;
@@ -30,18 +30,14 @@ int	check_colors_limits(char *line, t_temp_map *map)
 		flag = -1;
 	free_split(new);
 	if (flag == -1)
-		return (error_central(-6, map));
+		return (free(line), error_central(-6, map));
 	return (1);
 }
 
-int	check_colors(char *line, t_temp_map *map)
+int	check_colors(char *line, t_temp_map *map, int comma, int i)
 {
-	int	comma;
-	int	i;
-	char *temp;
+	char	*temp;
 
-	i = 0;
-	comma = 0;
 	temp = ft_remove_extra_spaces(line, map);
 	while (temp[i] != '\0' && !is_whitespace(temp[i]))
 		i++;
@@ -60,7 +56,7 @@ int	check_colors(char *line, t_temp_map *map)
 			i++;
 	}
 	if ((temp[i] != '\0' && temp[i] != '\n') || comma != 2)
-		return (error_central(-4, map));
+		return (free(temp), error_central(-4, map));
 	check_colors_limits(temp, map);
 	free(temp);
 	return (1);
@@ -119,7 +115,7 @@ int	col_val(t_temp_map *map, int i)
 		if (map->lines[i][0] == 'F' || map->lines[i][0] == 'C')
 		{
 			color[1 - (map->lines[i][0] - 67) / (70 - 67)] = true;
-			if (check_colors(map->lines[i], map) == -1)
+			if (check_colors(map->lines[i], map, 0, 0) == -1)
 				return (error_central(-4, map));
 		}
 	}

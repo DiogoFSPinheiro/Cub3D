@@ -53,12 +53,12 @@ int	while_checker(t_temp_map *map, const int i, const int flag)
 void	check_textures(t_temp_map *map, int i, int j, char **temp)
 {
 	static int	flag = 0;
+	char		*temp_line;
 
 	while (while_checker(map, i, 1) == 1)
 		i++;
-	while (while_checker(map, i, 0) == 1)
+	while (while_checker(map, i, 0) == 1 && flag++ > -1)
 	{
-		flag++;
 		j = i;
 		while (flag != 4 && (map->lines[j + 1][0] == '\0'))
 			j++;
@@ -67,14 +67,11 @@ void	check_textures(t_temp_map *map, int i, int j, char **temp)
 				error_central(-9, map);
 		if (flag == 4 && map->lines[j + 1][0] != '\0')
 			error_central(-8, map);
-		char *temp2 = ft_remove_extra_spaces(map->lines[i], map);
-		temp = ft_split(temp2, ' ');
+		temp_line = ft_remove_extra_spaces(map->lines[i], map);
+		temp = ft_split(temp_line, ' ');
 		if (temp[0] && temp[1] && temp[1][0] != '.')
-		{
-			free_split(temp);
-			error_central(-9, map);
-		}
-		free(temp2);
+			ft_free_pack(map, temp_line, temp);
+		free(temp_line);
 		line_checker(temp, map);
 		free_split(temp);
 		i = j + 1;
