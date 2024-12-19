@@ -69,7 +69,7 @@ char	*ft_remove_extra_spaces(char *str, t_temp_map *map)
 	line = ft_calloc(sizeof(char), ft_strlen(str) + 1);
 	if (!line)
 		error_central(-15, map);
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+	while (is_whitespace(str[i]))
 		i++;
 	while (str[i])
 	{

@@ -15,7 +15,7 @@ SO ./assets/textures/purple_stone.xpm
 WE ./assets/textures/blue_stone.xpm
 
 
-		EA ./assets/textures/grey_stone.xpm
+	 	EA ./assets/textures/grey_stone.xpm
 
 						F 							105,      105, 105
 C 225,30,			0
