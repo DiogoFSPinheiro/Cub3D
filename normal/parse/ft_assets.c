@@ -17,6 +17,7 @@ void	line_checker(char **line, t_temp_map *map)
 	if (!line[0] || !line[1])
 	{
 		free_split(line);
+		printf("here\n");
 		error_central(-9, map);
 	}
 	if (line[0] && line[1])
@@ -63,13 +64,12 @@ void	check_textures(t_temp_map *map, int i, int j, char **temp)
 		while (flag != 4 && (map->lines[j + 1][0] == '\0'))
 			j++;
 		if (while_checker(map, j + 1, 1) == 1)
-			if (flag < 3)
-				error_central(-9, map);
+			if (flag < 3) {printf("or here\n"), error_central(-9, map); }
 		if (flag == 4 && map->lines[j + 1][0] != '\0')
 			error_central(-8, map);
 		temp_line = ft_remove_extra_spaces(map->lines[i], map);
 		temp = ft_split(temp_line, ' ');
-		if (temp[0] && temp[1] && temp[1][0] != '.')
+		if (!temp[0] || !temp[1]) //&& temp[1][0] != '.'
 			ft_free_pack(map, temp_line, temp);
 		free(temp_line);
 		line_checker(temp, map);

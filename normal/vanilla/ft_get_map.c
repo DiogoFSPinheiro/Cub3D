@@ -96,6 +96,7 @@ char	*get_texture_path(t_temp_map *map, int c)
 	char	*path;
 
 	path = NULL;
+	line = NULL;
 	i = 0;
 	while (map->lines[i] && map->lines[i][0] != c)
 		i++;

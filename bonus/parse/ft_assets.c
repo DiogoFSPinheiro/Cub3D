@@ -69,7 +69,7 @@ void	check_textures(t_temp_map *map, int i, int j, char **temp)
 			error_central(-8, map);
 		temp_line = ft_remove_extra_spaces(map->lines[i], map);
 		temp = ft_split(temp_line, ' ');
-		if (temp[0] && temp[1] && temp[1][0] != '.')
+		if (!temp[0] || !temp[1]) //&& temp[1][0] != '.'
 			ft_free_pack(map, temp_line, temp);
 		free(temp_line);
 		line_checker(temp, map);

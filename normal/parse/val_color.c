@@ -116,7 +116,7 @@ int	col_val(t_temp_map *map, int i)
 		{
 			color[1 - (map->lines[i][0] - 67) / (70 - 67)] = true;
 			if (check_colors(map->lines[i], map, 0, 0) == -1)
-				return (error_central(-4, map));
+				return (printf("here\n"),error_central(-4, map));
 		}
 	}
 	if (color[0] == false || color[1] == false)

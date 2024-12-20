@@ -30,7 +30,7 @@ char	*ft_color_special(char *line, int j, int i, t_temp_map *map)
 
 	new_line = ft_calloc(sizeof(char), ft_strlen(line) + 2);
 	if (!new_line)
-		error_central(-15, map);
+		 error_central(-15, map);
 	while (line[i] != '\0')
 	{
 		while (line[i] != '\0' && !is_whitespace(line[i]))

@@ -57,6 +57,7 @@ void	render(t_mlx *win)
 	mlx_loop(win->mlx_connect);
 }
 
+
 char	*ft_remove_extra_spaces(char *str, t_temp_map *map)
 {
 	char	*line;

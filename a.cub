@@ -1,10 +1,10 @@
       F 3,92,92
- 	    			C	2		                   			  255	, 	0
+ 	    			C	2,		                   			  255	, 	0
 
-SO 	./assets/south_texture.xpm
-     NO dsf	ds.xpm
-WE ./assets/west_texture.xpm
-	  EA 	./assets/east_texture.xpm
+    		NO ./sprites/north_wall.xpm
+SO ./sprites/south_wall.xpm
+   		WE ./sprites/west_wall.xpm
+ EA ./sprites/east_wall.xpm
 
 
 

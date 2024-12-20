@@ -6,7 +6,7 @@
 /*   By: paulo-do <paulo-do@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 15:34:33 by paulo-do          #+#    #+#             */
-/*   Updated: 2024/12/16 15:34:36 by paulo-do         ###   ########.fr       */
+/*   Updated: 2024/12/19 21:49:14 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,9 @@ int	is_whitespace(char c)
 void	ft_validations(char *argv[])
 {
 	t_temp_map	*map;
-
+/*
+ * There will be an infinite loop on the pdf we need to find a solution to clear the  gnl buffer
+ */
 	ft_check_file_name(argv[1]);
 	map = ft_calloc(sizeof(t_temp_map), 1);
 	map->player = ft_calloc(sizeof(t_player), 1);
