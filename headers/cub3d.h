@@ -266,7 +266,6 @@ void	free_split(char **str);
 void	ft_free_pack(t_temp_map *map, char **temp);
 void	ft_end_gnl(int fd, t_temp_map *map, char *line);
 
-
 //color validations
 int		col_val(t_temp_map *map, int i);
 int		ft_invalid_start(t_temp_map *map, char c, int i);

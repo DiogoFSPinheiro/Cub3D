@@ -42,7 +42,7 @@ int	ft_get_colors(t_temp_map *map, int c)
 		map->lines[i][1] = ',';
 		temp = ft_split(map->lines[i], ',');
 		hex_color = rgb_to_int(ft_atoi(temp[1]),
-							   ft_atoi(temp[2]), ft_atoi(temp[3]));
+				ft_atoi(temp[2]), ft_atoi(temp[3]));
 		free_split(temp);
 	}
 	return (hex_color);
@@ -60,7 +60,7 @@ char	**get_final_map(t_temp_map *map)
 	new_map = NULL;
 	first_check(map, 0);
 	while (map->lines && map->lines[i][j] != '0'
-		   && map->lines[i][j] != '1' && map->lines[i][j] != ' ')
+		&& map->lines[i][j] != '1' && map->lines[i][j] != ' ')
 		i++;
 	new_map = ft_calloc(sizeof(char *), (map->size - i) + 1);
 	max_line = ft_get_max_line(i, map);
