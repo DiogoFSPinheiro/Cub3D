@@ -6,7 +6,7 @@
 /*   By: paulo-do <paulo-do@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 07:33:15 by paulo-do          #+#    #+#             */
-/*   Updated: 2024/12/19 07:33:15 by paulo-do         ###   ########.fr       */
+/*   Updated: 2024/12/20 17:33:57 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int	ft_get_colors(t_temp_map *map, int c)
 	int		i;
 	int		hex_color;
 	char	**temp;
-	char	*color;
 
 	i = 0;
 	hex_color = 0;
@@ -40,14 +39,11 @@ int	ft_get_colors(t_temp_map *map, int c)
 		i++;
 	if (map->lines[i] && map->lines[i][0] == c)
 	{
-		temp = ft_split(map->lines[i], ' ');
-		color = ft_strdup(temp[1]);
+		map->lines[i][1] = ',';
+		temp = ft_split(map->lines[i], ',');
+		hex_color = rgb_to_int(ft_atoi(temp[1]),
+				ft_atoi(temp[2]), ft_atoi(temp[3]));
 		free_split(temp);
-		temp = ft_split(color, ',');
-		hex_color = rgb_to_int(ft_atoi(temp[0]),
-				ft_atoi(temp[1]), ft_atoi(temp[2]));
-		free_split(temp);
-		free(color);
 	}
 	return (hex_color);
 }
@@ -62,7 +58,7 @@ char	**get_final_map(t_temp_map *map)
 	i = 0;
 	j = 0;
 	new_map = NULL;
-	first_check(map, 0, 0);
+	first_check(map, 0);
 	while (map->lines && map->lines[i][j] != '0'
 			&& map->lines[i][j] != '1' && map->lines[i][j] != ' ')
 		i++;
@@ -106,7 +102,8 @@ char	*get_texture_path(t_temp_map *map, int c)
 		free(map->lines[i]);
 		map->lines[i] = line;
 		temp = ft_split(map->lines[i], ' ');
-		path = ft_strdup(temp[1]);
+		if (temp[1] && !temp[2])
+			path = ft_strdup(temp[1]);
 		free_split(temp);
 	}
 	return (path);

@@ -3,11 +3,14 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
       <config projectName="cub3d" targetName="cub3d_bonus" />
       <config projectName="cub3d" targetName="fclean" />
-      <config projectName="cub3d" targetName="cub3d" />
+      <config projectName="cub3d" targetName="cub3D" />
       <config projectName="cub3d" targetName="bonus" />
       <config projectName="cub3d" targetName="all" />
       <config projectName="cub3d" targetName="re" />
@@ -21,58 +24,16 @@
   <component name="ChangeListManager">
     <list default="true" id="5a503b18-b43e-4391-951d-960a73990013" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a.cub" beforeDir="false" afterPath="$PROJECT_DIR$/a.cub" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bookshelf.xcf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/c.xcf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/ea.xcf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/east_texture.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/f.xcf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/invalid/invalid_char.cub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/invalid/invalid_characters.cub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/invalid/invalid_color.cub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/invalid/invalid_empty_line.cub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/invalid/invalid_extension.ber" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/invalid/invalid_texture_ext.cub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/invalid/invalid_walls.cub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/invalid/map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/invalid/map_at_start.cub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/invalid/map_with_nl.cub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/invalid/no_player.cub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/invalid/texture_file_nt_found.cub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/valid/library.cub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/valid/mossy.cub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/valid/simple.cub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/valid/valid.cub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/valid/valid_multiple_spaces.cub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/valid/valid_small.cub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/maps/valid/validation.cub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/no.xcf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/north_texture.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/so.xcf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/south_texture.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/blue_stone.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/bookshelf.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/bookshelf_02.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/bookshelf_03.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/ea.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/grey_stone.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/mossy.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/no.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/purple_stone.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/red_brick.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/so.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/wall.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/we.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/wood.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wall.xcf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/we.xcf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/west_texture.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/normal/parse/ft_assets.c" beforeDir="false" afterPath="$PROJECT_DIR$/normal/parse/ft_assets.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/normal/parse/ft_validations.c" beforeDir="false" afterPath="$PROJECT_DIR$/normal/parse/ft_validations.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/normal/parse/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/normal/parse/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/normal/parse/val_colo_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/normal/parse/val_colo_utils.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/normal/parse/val_color.c" beforeDir="false" afterPath="$PROJECT_DIR$/normal/parse/val_color.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/normal/vanilla/ft_get_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/normal/vanilla/ft_get_map.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bb.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext_miss.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leak.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map10.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map_files/valid/cheese_maze 1.cub" beforeDir="false" afterPath="$PROJECT_DIR$/map_files/valid/cheese_maze 1.cub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map_too_long.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/valgrind_failures.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,12 +106,13 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/paulo-do/Videos/cub3d/normal/vanilla&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/paulo-do/Videos/cub3d&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -174,7 +136,7 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="cub3d" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cub3d" TARGET_NAME="cub3d" CONFIG_NAME="cub3d" version="1">
+    <configuration name="cub3D" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cub3d" TARGET_NAME="cub3D" CONFIG_NAME="cub3D" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
@@ -197,7 +159,7 @@
     <list>
       <item itemvalue="Native Application.all" />
       <item itemvalue="Native Application.bonus" />
-      <item itemvalue="Native Application.cub3d" />
+      <item itemvalue="Native Application.cub3D" />
       <item itemvalue="Native Application.cub3d_bonus" />
       <item itemvalue="Native Application.fclean" />
       <item itemvalue="Native Application.re" />
@@ -229,7 +191,15 @@
       <workItem from="1734601045346" duration="4450000" />
       <workItem from="1734616733387" duration="309000" />
       <workItem from="1734624235732" duration="6085000" />
-      <workItem from="1734631681632" duration="15279000" />
+      <workItem from="1734631681632" duration="15574000" />
+      <workItem from="1734692963501" duration="5842000" />
+      <workItem from="1734706476372" duration="701000" />
+      <workItem from="1734707185850" duration="9000" />
+      <workItem from="1734707203127" duration="17000" />
+      <workItem from="1734707227622" duration="557000" />
+      <workItem from="1734707908500" duration="9038000" />
+      <workItem from="1734769382747" duration="20856000" />
+      <workItem from="1734801520259" duration="2989000" />
     </task>
     <servers />
   </component>

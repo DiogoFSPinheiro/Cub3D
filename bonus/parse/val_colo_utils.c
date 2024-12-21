@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../headers/cub3d_bonus.h"
+#include "../../headers/cub3d.h"
 
 void	check_next_char(t_temp_map *map, int c, int i)
 {
@@ -36,7 +36,8 @@ char	*ft_color_special(char *line, int j, int i, t_temp_map *map)
 		while (line[i] != '\0' && !is_whitespace(line[i]))
 		{
 			new_line[j] = line[i];
-			if (line[i] == 'F' || line[i] == 'C')
+			if ((line[i] == 'F' || line[i] == 'C')
+				&& is_whitespace(line[i + 1]))
 				new_line[++j] = ' ';
 			j++;
 			i++;

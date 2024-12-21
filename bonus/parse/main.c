@@ -97,8 +97,8 @@ int	main(int argc, char *argv[])
 		ft_validations(argv);
 		map = ft_calloc(sizeof(t_temp_map), 1);
 		map->player = ft_calloc(sizeof(t_player), 1);
-		map->size = ft_get_file_size(argv[1]);
-		ft_get_map(&map, argv[1]);
+		map->size = ft_get_file_size(argv[1], map);
+		ft_get_map(&map, argv[1], 0, 0);
 		win = ft_calloc(sizeof(t_mlx), 1);
 		set_up_win(win, map);
 		free_map_parse(&map);
