@@ -22,13 +22,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a503b18-b43e-4391-951d-960a73990013" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bonus/parse/ft_getters.c" beforeDir="false" afterPath="$PROJECT_DIR$/bonus/parse/ft_getters.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map_files/valid/cheese_maze.cub" beforeDir="false" afterPath="$PROJECT_DIR$/map_files/valid/cheese_maze.cub" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/normal/parse/ft_getters.c" beforeDir="false" afterPath="$PROJECT_DIR$/normal/parse/ft_getters.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/normal/vanilla/ft_get_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/normal/vanilla/ft_get_map.c" afterDir="false" />
-    </list>
+    <list default="true" id="5a503b18-b43e-4391-951d-960a73990013" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,7 +188,7 @@
       <workItem from="1734707908500" duration="9038000" />
       <workItem from="1734769382747" duration="20856000" />
       <workItem from="1734801520259" duration="2989000" />
-      <workItem from="1734944569912" duration="2363000" />
+      <workItem from="1734944569912" duration="2682000" />
     </task>
     <servers />
   </component>
