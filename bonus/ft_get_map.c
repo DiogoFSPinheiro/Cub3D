@@ -64,7 +64,8 @@ char	**get_final_map(t_temp_map *map)
 		i++;
 	new_map = ft_calloc(sizeof(char *), (map->size - i) + 1);
 	max_line = ft_get_max_line(i, map);
-	while (map->lines[i] != NULL)
+	while (map->lines[i] != NULL && map->lines[i][0] != '\0'
+		&& map->lines[i][0] != '\n')
 	{
 		new_map[j] = ft_copy_line(map->lines[i], max_line);
 		i++;

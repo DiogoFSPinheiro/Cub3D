@@ -86,7 +86,6 @@ void	ft_get_map(t_temp_map **map, char *file, int i, int j)
 	(*map)->size = i;
 	close(fd);
 }
-//reoved the i++ from there
 
 int	ft_get_start_map(t_temp_map *map)
 {
