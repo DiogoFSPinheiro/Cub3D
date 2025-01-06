@@ -6,7 +6,7 @@
 /*   By: diogosan <diogosan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 17:56:41 by diogosan          #+#    #+#             */
-/*   Updated: 2024/12/17 14:38:02 by diogosan         ###   ########.fr       */
+/*   Updated: 2025/01/06 19:23:46 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -314,6 +314,7 @@ void	ft_do_flood(t_temp_map *map, int start, int end, int i);
 
 //ft_checkers
 void	first_check(t_temp_map *map, int i);
+int		check_line_player(int start, char c, t_temp_map *map);
 
 //ft_validations
 void	ft_validations(char *argv[]);

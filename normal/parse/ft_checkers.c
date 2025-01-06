@@ -20,3 +20,14 @@ void	first_check(t_temp_map *map, int i)
 		i++;
 	}
 }
+
+int	check_line_player(int start, char c, t_temp_map *map)
+{
+	if (start != 0 && c != '\0' && c != '\n'
+		&& c != 'N' && c != 'S'
+		&& c != 'E' && c != 'W'
+		&& c != '1' && c != '0'
+		&& c != ' ')
+		error_central(-7, map);
+	return (0);
+}

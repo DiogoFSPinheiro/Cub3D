@@ -81,7 +81,8 @@ void	check_map(t_temp_map *map, int start, int end, int i)
 			end = i;
 		if (start != 0)
 			ft_check_line(i, map);
-		while (map->lines[i][++j] != '\0')
+		while (map->lines[i][++j] != '\0'
+			&& check_line_player(start, map->lines[i][j], map) == 0)
 			if (start != 0 && (player_check(map->lines[i][j], 0) == 1)
 				&& player_cnt++ > -2)
 				set_player(map, i, start, j);

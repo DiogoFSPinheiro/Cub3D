@@ -6,7 +6,7 @@
 /*   By: paulo-do <paulo-do@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 15:09:32 by paulo-do          #+#    #+#             */
-/*   Updated: 2024/11/23 17:17:59 by paulo-do         ###   ########.fr       */
+/*   Updated: 2025/01/06 19:23:07 by paulo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -291,6 +291,7 @@ void	ft_do_flood(t_temp_map *map, int start, int end, int i);
 
 //ft_checkers
 void	first_check(t_temp_map *map, int i);
+int		check_line_player(int start, char c, t_temp_map *map);
 
 //ft_validations
 void	ft_validations(char *argv[]);

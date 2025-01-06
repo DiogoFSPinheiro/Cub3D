@@ -22,6 +22,8 @@ int	check_extension(char *file_name, char *ext, int len)
 		len--;
 	if (ft_strncmp(&file_name[len], ext, 5))
 		return (-1);
+	if (len > 0 && file_name[len] == '.' && file_name[len - 1] == '/')
+		return (-1);
 	return (0);
 }
 

@@ -7,14 +7,7 @@
     <option name="flavorId" value="CMakePlainProjectFlavor" />
   </component>
   <component name="CMakeRunConfigurationManager">
-    <generated>
-      <config projectName="Cub3D" targetName="re" />
-      <config projectName="Cub3D" targetName="cub3D_bonus" />
-      <config projectName="Cub3D" targetName="fclean" />
-      <config projectName="Cub3D" targetName="all" />
-      <config projectName="Cub3D" targetName="bonus" />
-      <config projectName="Cub3D" targetName="cub3D" />
-    </generated>
+    <generated />
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -22,7 +15,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a503b18-b43e-4391-951d-960a73990013" name="Changes" comment="" />
+    <list default="true" id="5a503b18-b43e-4391-951d-960a73990013" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bonus/parse/ft_checkers.c" beforeDir="false" afterPath="$PROJECT_DIR$/bonus/parse/ft_checkers.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bonus/parse/val_extensions.c" beforeDir="false" afterPath="$PROJECT_DIR$/bonus/parse/val_extensions.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/cub3d.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/cub3d.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/cub3d_bonus.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/cub3d_bonus.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/normal/parse/ft_checkers.c" beforeDir="false" afterPath="$PROJECT_DIR$/normal/parse/ft_checkers.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/normal/parse/val_extensions.c" beforeDir="false" afterPath="$PROJECT_DIR$/normal/parse/val_extensions.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/normal/parse/val_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/normal/parse/val_map.c" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,6 +62,11 @@
         </entry>
       </map>
     </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -79,6 +86,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -89,7 +97,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/paulo-do/Desktop/Cub3D",
+    "last_opened_file_path": "/home/paulo-do/42_files/Cub3D",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -108,50 +116,12 @@
       <recent name="$PROJECT_DIR$/normal" />
     </key>
   </component>
-  <component name="RunManager" selected="Native Application.all">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+  <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="all" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Cub3D" TARGET_NAME="all" CONFIG_NAME="all" version="1">
-      <method v="2">
-        <option name="CLION.COMPOUND.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="bonus" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Cub3D" TARGET_NAME="bonus" CONFIG_NAME="bonus" version="1">
-      <method v="2">
-        <option name="CLION.COMPOUND.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="cub3D" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Cub3D" TARGET_NAME="cub3D" CONFIG_NAME="cub3D" version="1">
-      <method v="2">
-        <option name="CLION.COMPOUND.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="cub3D_bonus" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Cub3D" TARGET_NAME="cub3D_bonus" CONFIG_NAME="cub3D_bonus" version="1">
-      <method v="2">
-        <option name="CLION.COMPOUND.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="fclean" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Cub3D" TARGET_NAME="fclean" CONFIG_NAME="fclean" version="1">
-      <method v="2">
-        <option name="CLION.COMPOUND.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="re" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Cub3D" TARGET_NAME="re" CONFIG_NAME="re" version="1">
-      <method v="2">
-        <option name="CLION.COMPOUND.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Native Application.all" />
-      <item itemvalue="Native Application.bonus" />
-      <item itemvalue="Native Application.cub3D" />
-      <item itemvalue="Native Application.cub3D_bonus" />
-      <item itemvalue="Native Application.fclean" />
-      <item itemvalue="Native Application.re" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -189,6 +159,7 @@
       <workItem from="1734769382747" duration="20856000" />
       <workItem from="1734801520259" duration="2989000" />
       <workItem from="1734944569912" duration="2682000" />
+      <workItem from="1736188764421" duration="2676000" />
     </task>
     <servers />
   </component>
