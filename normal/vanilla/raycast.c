@@ -6,7 +6,7 @@
 /*   By: diogosan <diogosan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 19:51:00 by diogosan          #+#    #+#             */
-/*   Updated: 2024/12/02 15:37:46 by diogosan         ###   ########.fr       */
+/*   Updated: 2025/01/06 18:19:45 by diogosan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ static void	ft_horizontal_init(t_mlx *win, t_h_inter *vars, float ra)
 	{
 		vars->rx = win->player->x;
 		vars->ry = win->player->y;
-		vars->dof = 20;
+		vars->dof = 64;
 	}
 }
 
@@ -94,7 +94,7 @@ static void	horizontal_intersection(t_mlx *win, float ra, float *hx, float *hy)
 	t_h_inter	vars;
 
 	ft_horizontal_init(win, &vars, ra);
-	while (vars.dof < 20)
+	while (vars.dof < 64)
 	{
 		vars.mx = (int)(vars.rx / SQUARE);
 		vars.my = (int)(vars.ry / SQUARE);
@@ -120,7 +120,7 @@ static void	ft_vertical_init(t_mlx *win, t_v_inter *vars, float ra)
 	vars->dof = 0;
 	if (ra > P2 && ra < P3)
 	{
-		vars->rx = (((int)win->player->x / SQUARE) * SQUARE) - 0.0001;
+		vars->rx = (((int)win->player->x / SQUARE) * SQUARE) - 0.001;
 		vars->ry = (win->player->x - vars->rx) * vars->ntan + win->player->y;
 		vars->xo = -SQUARE;
 		vars->yo = -vars->xo * vars->ntan;
@@ -136,7 +136,7 @@ static void	ft_vertical_init(t_mlx *win, t_v_inter *vars, float ra)
 	{
 		vars->rx = win->player->x;
 		vars->ry = win->player->y;
-		vars->dof = 20;
+		vars->dof = 64;
 	}
 }
 
@@ -145,7 +145,7 @@ static void	vertical_intersection(t_mlx *win, float ra, float *vx, float *vy)
 	t_v_inter	vars;
 
 	ft_vertical_init(win, &vars, ra);
-	while (vars.dof < 20)
+	while (vars.dof < 64)
 	{
 		vars.mx = (int)(vars.rx / SQUARE);
 		vars.my = (int)(vars.ry / SQUARE);
