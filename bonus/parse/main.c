@@ -105,7 +105,7 @@ int	main(int argc, char *argv[])
 		render(win);
 	}
 	else if (argc > 1)
-		ft_printf_err("Error\nOnly one input is accepted");
+		ft_printf_err("Error\nOnly one input is accepted\n");
 	else
 		ft_printf_err("Error\nPlease use:\n./cub3d pwd/to/the/map\n");
 	return (0);
